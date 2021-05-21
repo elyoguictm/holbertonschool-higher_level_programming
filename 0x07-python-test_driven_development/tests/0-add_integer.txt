@@ -1,0 +1,60 @@
+================================
+Module '0-add_integer'
+----------------------------
+Test importing function from the module
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+
+Test 2 positive integers add_integer
+    >>> add_integer(4, 2)
+    6
+
+Test 1 positive and 1 negative integer add_integer
+    >>> add_integer(4, -2)
+    2
+
+Test 2 negative integers add_integer
+    >>> add_integer(-2, -2)
+    -4
+
+Test 2 floats add_integer
+    >>> add_integer(4.5, 2.1)
+    6
+
+Test with a single given number add_integer
+    >>> add_integer(-29)
+    69
+
+Test 3 numbers add_integer
+    >>> add_integer(4, 2, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+Test not integer/float add_integer
+    >>> add_integer("Imposter")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Test for module docstring:
+     >>> m = __import__("0-add_integer").__doc__
+     >>> len(m) > 1
+     True
+
+Test for function docstring:
+     >>> f = __import__("0-add_integer").add_integer.__doc__
+    >>> len(f) > 1
+    True
+
+Test for float overflow:
+     >>> add_integer(0, float('inf'))
+     Traceback (most recent call last):
+     ...
+     OverflowError: cannot convert float infinity to integer
+
+Test for passing float NaN:
+    >>> add_integer(0, float('nan'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer

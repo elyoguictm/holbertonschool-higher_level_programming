@@ -1,0 +1,39 @@
+==============================
+Module 'Text indention'
+------------------------------
+Test importing function from the module
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test for module docstring:
+     >>> m = __import__("5-text_indentation").__doc__
+     >>> len(m) > 1
+     True
+
+Test for function docstring:
+     >>> f = __import__("5-text_indentation").text_indentation.__doc__
+    >>> len(f) > 1
+    True
+
+Test invalid type argument:
+    >>> text_indentation(0)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Test argument text that does not contain '.' or '?':
+    >>> text_indentation("simple text")
+    simple text
+
+Test no argument given:
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Test blank line given as argument:
+    >>> text_indentation("Text containing \n a blank line. \n and another one")
+    Text containing 
+     a blank line.
+    <BLANKLINE>
+    <BLANKLINE>
+     and another one
