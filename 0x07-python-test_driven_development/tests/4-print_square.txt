@@ -1,40 +1,42 @@
 ================================
-Module 'Say my name'
+Module 'Print square'
 ----------------------------
-
 Test importing function from the module
-    >>> say_my_name = __import__('3-say_my_name').say_my_name
-
+    >>> print_square = __import__('4-print_square').print_square
 
 Test for module docstring:
-     >>> m = __import__("3-say_my_name").__doc__
+     >>> m = __import__("4-print_square").__doc__
      >>> len(m) > 1
      True
 
 Test for function docstring:
-     >>> f = __import__("3-say_my_name").say_my_name.__doc__
+     >>> f = __import__("4-print_square").print_square.__doc__
     >>> len(f) > 1
     True
 
-Test invalid first argument:
-    >>> say_my_name(1, "one")
+Test invalid argument type:
+    >>> print_square("69")
     Traceback (most recent call last):
     ...
-    TypeError: first_name must be a string
+    TypeError: size must be an integer
 
-Test invalid type second argument:
-    >>> say_my_name("two", 2)
+Test argument with a negative value:
+    >>> print_square(-1)
     Traceback (most recent call last):
     ...
-    TypeError: last_name must be a string
+    ValueError: size must be >= 0
 
-Test only one argument given:
-    >>> say_my_name = __import__('3-say_my_name').say_my_name
-    >>> say_my_name("solo")
-    My name is solo 
+Test argument is 0:
+    >>> print_square(0)
 
-Test no arguments given:
-    >>> say_my_name()
+Test argument is a negative float:
+    >>> print_square(-1.25)
     Traceback (most recent call last):
     ...
-    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+    TypeError: size must be an integer
+
+Test no argument given:
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
