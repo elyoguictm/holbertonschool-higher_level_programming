@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Print square" module """
+""" Print square module """
 
 
 def print_square(size):
