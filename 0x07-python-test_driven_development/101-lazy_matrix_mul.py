@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-""" Lazy matrix multiplication module """
-
+"""
+"Lazy matrix multiplication" module
+This module provides one function lazy_matrix_mul(): multiplies 2 matrices
+"""
 import numpy as np
+
 
 def lazy_matrix_mul(m_a, m_b):
     """
