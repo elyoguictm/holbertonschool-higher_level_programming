@@ -2,6 +2,7 @@
 """BaseGeometry module"""
 Rectangle = __import__('9-rectangle').Rectangle
 
+"""Square"""
 
 
 class Square(Rectangle):
