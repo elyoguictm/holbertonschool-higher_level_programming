@@ -1,12 +1,8 @@
-Using class ``MyList``
------------------------
+Test File for 1-my_list.py
+============================
 
-Class MyList can store a list
-Has a function print_sorted to print the list in MyList sorted
-
-First import class ``MyList``
-
-    >>> MyList = __import__('1-my_list').MyList
+Importing the function from the module:
+>>> my_list = __import__('1-my_list').MyList
 
 
 Checking for module docstring:
