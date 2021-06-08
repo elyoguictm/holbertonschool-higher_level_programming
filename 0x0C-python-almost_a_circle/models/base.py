@@ -6,8 +6,10 @@ This module defines the "Base" class
 import json
 import os
 
+
 class Base:
     """Base class"""
+
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -51,7 +53,8 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """Creation of an instance from a JsON file"""
+        """Creation of an instance from a JsON file
+        """
         filename = cls.__name__ + ".json"
         lists = []
         if os.path.exists(filename):
