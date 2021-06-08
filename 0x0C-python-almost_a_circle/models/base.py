@@ -62,7 +62,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """load from file."""
+        """Creation of an instance from a JsON file """
         filename = cls.__name__ + ".json"
         lists = []
         if os.path.exists(filename):
