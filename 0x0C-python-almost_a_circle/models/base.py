@@ -4,7 +4,7 @@ This module defines the "Base" class
 """
 
 import json
-
+import os
 
 class Base:
     """Base class"""
