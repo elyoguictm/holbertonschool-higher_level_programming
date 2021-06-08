@@ -50,6 +50,17 @@ class Base:
             file.write(json_str)
 
     @classmethod
+    def load_from_file(cls):
+        """Creation of an instance from a JsON file"""
+        filename = cls.__name__ + ".json"
+        lists = []
+        if os.path.exists(filename):
+            with open(filename, "r") as file:
+                for z in cls.from_json_string(file.read()):
+                    lists.append(cls.create(**z))
+        return lists
+
+    @classmethod
     def create(cls, **dictionary):
         """This method returns an instance with all attributes already set"""
         if len(dictionary) == 1:
@@ -59,14 +70,3 @@ class Base:
             dummy = cls(2, 2)
             dummy.update(**dictionary)
         return dummy
-
-    @classmethod
-    def load_from_file(cls):
-        """Creation of an instance from a JsON file """
-        filename = cls.__name__ + ".json"
-        lists = []
-        if os.path.exists(filename):
-            with open(filename, "r") as file:
-                for z in cls.from_json_string(file.read()):
-                    lists.append(cls.create(**z))
-        return lists
