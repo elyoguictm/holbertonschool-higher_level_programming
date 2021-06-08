@@ -4,6 +4,7 @@ Contains tests for Base class
 """
 
 import unittest
+import os
 from models import base
 Base = base.Base
 
@@ -17,3 +18,6 @@ class TestBase(unittest.TestCase):
     def test_class_docstring(self):
         """Test Base class docstring"""
         self.assertTrue(len(Base.__doc__) >= 1)
+
+    if __name__ == '__main__':
+        unittest.main()
