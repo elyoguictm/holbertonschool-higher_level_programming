@@ -4,10 +4,10 @@ displays all values in the states table of hbtn_0e_0_usa
 where name matches matches an argument passed as a parameter
 """
 
-from sys import argv
-import MySQLdb
-
 if __name__ == "__main__":
+    from sys import argv
+    import MySQLdb
+    
     HOST = "localhost"
     PORT = 3306
     USER = argv[1]
