@@ -14,12 +14,12 @@ if __name__ == "__main__":
     USER = argv[1]
     PASSWORD = argv[2]
     DATABASE = argv[3]
-    STATE = argv[4]
+    NAME = argv[4]
     db = MySQLdb.connect(host=HOST, user=USER, password=PASSWORD,
                          db=DATABASE, port=PORT)
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states WHERE \
-name = '{}' ORDER BY id".format(STATE))
+name = '{}' ORDER BY id".format(NAME))
     querry = cursor.fetchall()
     for data in querry:
         print(data)
