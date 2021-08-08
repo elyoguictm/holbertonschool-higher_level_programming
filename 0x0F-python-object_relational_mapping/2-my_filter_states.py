@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
 displays all values in the states table of hbtn_0e_0_usa
-where name matches matches an argument passed as a parameter
 """
 
 import MySQLdb
@@ -17,8 +16,8 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host=HOST, user=USER, password=PASSWORD,
                          db=DATABASE, port=PORT)
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id"\
-                   .format(STATE))
+    cursor.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id".format\
+                   (STATE))
     querry = cursor.fetchall()
     for data in querry:
         print(data)
