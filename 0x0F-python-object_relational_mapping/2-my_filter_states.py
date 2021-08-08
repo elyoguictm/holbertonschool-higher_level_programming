@@ -5,9 +5,9 @@ where name matches matches an argument passed as a parameter
 """
 
 if __name__ == "__main__":
-    from sys import argv
     import MySQLdb
-    
+    from sys import argv
+
     HOST = "localhost"
     PORT = 3306
     USER = argv[1]
