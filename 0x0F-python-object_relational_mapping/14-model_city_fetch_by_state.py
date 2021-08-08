@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-script that prints all City objects from the database hbtn_0e_6_usa
+script that prints all City objects
+from the database hbtn_0e_6_usa
 """
 
 from sys import argv
