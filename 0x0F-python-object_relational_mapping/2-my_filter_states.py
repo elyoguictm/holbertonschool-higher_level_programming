@@ -22,6 +22,7 @@ if __name__ == "__main__":
 name = '{}' ORDER BY id".format(NAME))
     querry = cursor.fetchall()
     for data in querry:
-        print(data)
+        if data[1] == NAME:
+            print(data)
     cursor.close()
     db.close()
