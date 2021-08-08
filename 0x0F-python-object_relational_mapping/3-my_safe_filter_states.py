@@ -19,7 +19,7 @@ if __name__ == "__main__":
                          db=DATABASE, port=PORT)
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states WHERE \
-                   name = %s ORDER BY id", (STATE,))
+    name = %s ORDER BY id", (STATE,))
     querry = cursor.fetchall()
     for data in querry:
         print(data)
