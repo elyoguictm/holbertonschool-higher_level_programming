@@ -6,7 +6,7 @@ from sys import argv
 
 if __name__ == "__main__":
     if len(argv) == 2:
-         q = argv[1]
+        q = argv[1]
     else:
         q = ""
     values = {'q': q}
