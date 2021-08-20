@@ -4,6 +4,7 @@
 import requests
 from sys import argv
 
+
 if __name__ == "__main__":
     email = {'email': argv[2]}
     val = argv[1]
