@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ script that takes in a URL """
-
 import requests
 from sys import argv
+
 
 if __name__ == "__main__":
     request = requests.get(argv[1])
