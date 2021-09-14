@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const request = require('request');
-argv = process.argv[2];
+const argv = process.argv[2];
 request(argv, function (error, response, body) {
   if (error) throw error;
   const user = {};
