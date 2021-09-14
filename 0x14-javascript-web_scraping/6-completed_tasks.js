@@ -6,11 +6,11 @@ request(argv, function (error, response, body) {
   const user = {};
   for (const task of JSON.parse(body)) {
     if (task.completed) {
-	    if (user[task.userId]) {
+      if (user[task.userId]) {
         user[task.userId]++;
-	    } else {
+      } else {
         user[task.userId] = 1;
-	    }
+      }
     }
   }
   console.log(user);
